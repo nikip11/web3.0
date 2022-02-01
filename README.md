@@ -4,7 +4,6 @@ App
 
 ## To create a new React app
 ```
-docker-compose run app npx create-react-app .
 docker-compose run app npx create-react-app . --template typescript
 ```
 
@@ -36,7 +35,9 @@ http://localhost:3001/
 
 
 ## TODO:
+- [ ] Eslint configuration
 - [ ] add react-router-dom and routes
 - [ ] add react query
+- [ ] Basic template
 - [ ] add PokeAPI
 - [ ] add Login page and security
