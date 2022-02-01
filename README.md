@@ -3,41 +3,37 @@
 App
 
 ## To create a new React app
+
 ```
 docker-compose run app npx create-react-app . --template typescript
 ```
 
 ## to start yarn start
+
 ```
 docker-compose up
 ```
 
 ## to use yarn in project
+
 ```
 docker-compose run web yarn "scripts"
 ```
 
-## to install eslint and prettier
-```
-yarn add eslint-config-prettier eslint-plugin-prettier prettier -D
-```
-## to install react router dom
-```
-yarn add react-router-dom@6
-```
-## to install Mui
-```
-yarn add @mui
-```
-
 ## to open your project in browser
+
 http://localhost:3001/
 
+## Theme basic
+
+https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/blog
+https://mui.com/getting-started/templates/blog/
 
 ## TODO:
+
 - [ ] Eslint configuration
+- [ ] Basic template
 - [ ] add react-router-dom and routes
 - [ ] add react query
-- [ ] Basic template
 - [ ] add PokeAPI
 - [ ] add Login page and security
