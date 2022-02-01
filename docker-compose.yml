@@ -8,5 +8,6 @@ services:
       - ./app:/app
     environment:
       - PORT=3001
+    working_dir: /app
     ports:
       - 3001:3001
