@@ -1,14 +1,18 @@
 import './App.css'
-// import Login from 'components/views/Login'
 import { Web3ReactProvider } from '@web3-react/core'
 import { getLibrary } from 'config/web3'
-import Layout from 'components/layout/Layout'
+import { BrowserRouter } from 'react-router-dom'
+import { Suspense } from 'react'
+import Routes from 'routes/Routes'
 
-function App() {
+const App = () => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-      {/* <Login /> */}
-      <Layout />
+      <Suspense fallback={<div>Loading...</div>}>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </Suspense>
     </Web3ReactProvider>
   )
 }

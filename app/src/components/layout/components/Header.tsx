@@ -5,11 +5,14 @@ import IconButton from '@mui/material/IconButton'
 // import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
+import { Icon } from '@mui/material'
+import Login from 'components/views/Login'
 
 interface HeaderProps {
   sections: Array<{
     title: string
     url: string
+    icon?: string
   }>
   title: string
 }
@@ -18,7 +21,7 @@ export default function Header(props: HeaderProps) {
   const { sections, title } = props
 
   return (
-    <>
+    <header>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Button size="small">Subscribe</Button>
         <Typography
@@ -26,15 +29,13 @@ export default function Header(props: HeaderProps) {
           variant="h5"
           color="inherit"
           align="center"
-          noWrap
           sx={{ flex: 1 }}
+          noWrap
         >
           {title}
         </Typography>
         <IconButton>{/* <SearchIcon /> */}</IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
-        </Button>
+        <Login />
       </Toolbar>
       <Toolbar
         component="nav"
@@ -50,10 +51,11 @@ export default function Header(props: HeaderProps) {
             href={section.url}
             sx={{ p: 1, flexShrink: 0 }}
           >
+            {section.icon && <Icon color="primary">{section.icon}</Icon>}
             {section.title}
           </Link>
         ))}
       </Toolbar>
-    </>
+    </header>
   )
 }

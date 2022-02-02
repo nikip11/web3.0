@@ -33,7 +33,7 @@ https://mui.com/getting-started/templates/blog/
 
 - [ ] Eslint configuration
 - [ ] Basic template
-- [ ] add react-router-dom and routes
+- [*] add react-router-dom and routes
 - [ ] add react query
 - [ ] add PokeAPI
-- [ ] add Login page and security
+- [*] add Login page and security
