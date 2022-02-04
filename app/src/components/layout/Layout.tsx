@@ -10,6 +10,7 @@ const theme = createTheme()
 
 const menu = [
   { title: 'Home', url: '/', icon: 'home' },
+  { title: 'Pokemon', url: '/pokemon' },
   { title: 'Technology', url: '#' },
   { title: 'Protected', url: '/protected' }
 ]
@@ -22,18 +23,7 @@ export default function Layout() {
         <Header title="Blog" sections={menu} />
         <main>
           <Grid container spacing={4}>
-            <Grid
-              item
-              xs={12}
-              md={8}
-              sx={{
-                '& .markdown': {
-                  py: 3
-                }
-              }}
-            >
-              <Outlet />
-            </Grid>
+            <Outlet />
           </Grid>
         </main>
         <Footer />

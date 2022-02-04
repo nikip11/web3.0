@@ -4,6 +4,7 @@ import NotFound from 'components/views/NotFound'
 import Layout from 'components/layout/Layout'
 import Protected from 'components/views/Protected'
 import RequireAuth from 'components/views/RequireAuth'
+import Pokemon from 'components/views/Pokemon'
 
 const Routes = () => {
   let routes: RouteObject[] = [
@@ -13,7 +14,11 @@ const Routes = () => {
       children: [
         { index: true, element: <Home /> },
         {
-          path: '/protected',
+          path: 'pokemon/:id',
+          element: <Pokemon />
+        },
+        {
+          path: 'protected',
           element: (
             <RequireAuth>
               <Protected />
@@ -22,7 +27,6 @@ const Routes = () => {
         }
       ]
     },
-    // { path: '/login', element: <Login /> },
     { path: '*', element: <NotFound /> }
   ]
   return useRoutes(routes)
