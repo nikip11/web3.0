@@ -17,9 +17,10 @@ https://mui.com/getting-started/templates/blog/
 
 ## TODO:
 
-- [ ] Eslint configuration
+- [x] Eslint configuration
 - [x] Basic template
 - [x] add react-router-dom and routes
 - [ ] add react query
 - [x] add PokeAPI
 - [x] add Login page and security
+- [ ] Install and configure Husky for precommits
