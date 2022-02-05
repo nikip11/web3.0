@@ -63,17 +63,28 @@ export default function Pokemon() {
           <Avatar
             alt={data.name}
             src={data.sprites.other.dream_world.front_default}
-            sx={{ width: 128, height: 128, border: '2px solid black', justifyContent: 'center' }}
+            sx={{
+              width: 128,
+              height: 128,
+              border: '2px solid black',
+              justifyContent: 'center'
+            }}
           />
           <Avatar
             alt={data.name}
             src={data.sprites.other.home.front_default}
-            sx={{ width: 128, height: 128, border: '2px solid black', justifyContent: 'center' }}
+            sx={{
+              width: 128,
+              height: 128,
+              border: '2px solid black',
+              justifyContent: 'center'
+            }}
           />
           <Typography variant="h4" gutterBottom sx={{ textAlign: 'center' }}>
-            <img src={data.sprites.front_default} alt={data.name} /> {data.name}
+            <img src={data.sprites.front_default} alt={data.name} />
+            {data.name}
             <br />
-            {data.weight} - {data.height}
+            Weight: {data.weight}, Height: {data.height}
           </Typography>
         </>
       )}

@@ -24,3 +24,6 @@ https://mui.com/getting-started/templates/blog/
 - [x] add PokeAPI
 - [x] add Login page and security
 - [ ] Install and configure Husky for precommits
+- [ ] Dark mode
+- [ ] Toast Context with  snackbar
+- [ ] User Context

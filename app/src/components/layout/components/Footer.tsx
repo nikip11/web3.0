@@ -1,4 +1,3 @@
-import * as React from 'react'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
@@ -10,14 +9,13 @@ function Copyright() {
       {'Copyright © '}
       <Link color="inherit" href="https://np11.es/" target="_blank">
         np11.es
-      </Link>{' '}
+      </Link>
       {new Date().getFullYear()}
-      {'.'}
     </Typography>
   )
 }
 
-interface FooterProps {
+type FooterProps = {
   description?: string
   title?: string
 }

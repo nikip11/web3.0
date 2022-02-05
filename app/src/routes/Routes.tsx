@@ -7,7 +7,7 @@ import RequireAuth from 'components/views/RequireAuth'
 import Pokemon from 'components/views/Pokemon'
 
 const Routes = () => {
-  let routes: RouteObject[] = [
+  const routes: RouteObject[] = [
     {
       path: '/',
       element: <Layout />,
