@@ -1,6 +1,6 @@
 import { Button, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import { useToastContext } from 'contexts/toastContext'
+import { useToastContext } from 'contexts/toastContext/ToastContext'
 
 export default function Home() {
   const addToast = useToastContext()
@@ -11,7 +11,7 @@ export default function Home() {
         size="small"
         onClick={() =>
           addToast({
-            message: 'Hello',
+            message: 'This is a success message!',
             severity: 'success'
           })
         }
@@ -22,7 +22,7 @@ export default function Home() {
         size="small"
         onClick={() =>
           addToast({
-            message: 'Error',
+            message: 'This is an error message!',
             severity: 'error'
           })
         }
@@ -33,13 +33,36 @@ export default function Home() {
         size="small"
         onClick={() =>
           addToast({
-            message: 'Peligro',
+            message: 'This is a warning message!',
             severity: 'warning'
           })
         }
       >
         warning
       </Button>
+      <Button
+        size="small"
+        onClick={() =>
+          addToast({
+            message: 'This is an information message!',
+            severity: 'info'
+          })
+        }
+      >
+        info
+      </Button>
+      <Button
+        size="small"
+        onClick={() =>
+          addToast({
+            message: 'Documento creado',
+            action: () => console.log('action')
+          })
+        }
+      >
+        Con una acción
+      </Button>
+
       <Typography variant="h2" gutterBottom sx={{ textAlign: 'center' }}>
         This is the home
       </Typography>

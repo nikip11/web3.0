@@ -4,7 +4,7 @@ import { getLibrary } from 'config/web3'
 import { BrowserRouter } from 'react-router-dom'
 import { Suspense } from 'react'
 import Routes from 'routes/Routes'
-import { ToastContextProvider } from './contexts/toastContext'
+import { ToastContextProvider } from 'contexts/toastContext/ToastContext'
 
 const App = function () {
   return (
