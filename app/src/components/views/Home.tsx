@@ -7,7 +7,39 @@ export default function Home() {
 
   return (
     <Grid item xs={12} md={12} sx={{ py: 5, my: 5 }}>
-      <Button size="small" onClick={() => addToast('Formulario enviado')}></Button>
+      <Button
+        size="small"
+        onClick={() =>
+          addToast({
+            message: 'Hello',
+            severity: 'success'
+          })
+        }
+      >
+        success
+      </Button>
+      <Button
+        size="small"
+        onClick={() =>
+          addToast({
+            message: 'Error',
+            severity: 'error'
+          })
+        }
+      >
+        error
+      </Button>
+      <Button
+        size="small"
+        onClick={() =>
+          addToast({
+            message: 'Peligro',
+            severity: 'warning'
+          })
+        }
+      >
+        warning
+      </Button>
       <Typography variant="h2" gutterBottom sx={{ textAlign: 'center' }}>
         This is the home
       </Typography>

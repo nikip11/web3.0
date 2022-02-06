@@ -3,11 +3,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
-    'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
-    'plugin:@typescript-eslint/eslint-recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    'plugin:@typescript-eslint/recommended' // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+  parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     es6: true,
@@ -15,17 +15,17 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
+    ecmaVersion: 2020,
+    sourceType: 'module',
     ecmaFeatures: {
-      jsx: true, // Allows for the parsing of JSX
+      jsx: true,
       arrowFunctions: true
     }
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   settings: {
     react: {
-      version: 'detect' // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: 'detect'
     },
     'import/resolver': {
       node: {
@@ -35,18 +35,18 @@ module.exports = {
     }
   },
   rules: {
-    // Existing rules
-    'comma-dangle': 'off', // https://eslint.org/docs/rules/comma-dangle
-    'function-paren-newline': 'off', // https://eslint.org/docs/rules/function-paren-newline
-    'global-require': 'off', // https://eslint.org/docs/rules/global-require
-    'import/no-dynamic-require': 'off', // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
-    'no-inner-declarations': 'off', // https://eslint.org/docs/rules/no-inner-declarations
-    // New rules
+    'comma-dangle': 'off',
+    'function-paren-newline': 'off',
+    'global-require': 'off',
+    'import/no-dynamic-require': 'off',
+    'no-inner-declarations': 'off',
     'react/react-in-jsx-scope': 'off',
     'class-methods-use-this': 'off',
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-var-requires': 'off'
   }
 }
