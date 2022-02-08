@@ -5,6 +5,8 @@ import Layout from 'components/layout/Layout'
 import Protected from 'components/views/Protected'
 import RequireAuth from 'components/views/RequireAuth'
 import Pokemon from 'components/views/Pokemon'
+import Toast from 'components/views/customComponents/components/Toast'
+import CustomComponents from 'components/views/customComponents/CustomComponents'
 
 const Routes = () => {
   const routes: RouteObject[] = [
@@ -18,6 +20,14 @@ const Routes = () => {
           element: <Pokemon />
         },
         {
+          path: 'components/',
+          element: <CustomComponents />
+        },
+        {
+          path: 'components/toast/',
+          element: <Toast />
+        },
+        {
           path: 'protected',
           element: (
             <RequireAuth>
@@ -27,6 +37,7 @@ const Routes = () => {
         }
       ]
     },
+    {},
     { path: '*', element: <NotFound /> }
   ]
   return useRoutes(routes)

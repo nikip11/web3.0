@@ -1,4 +1,4 @@
-import { Avatar, Grid } from '@mui/material'
+import { Avatar } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import useFetch from 'hooks/useFetch'
 import { useParams } from 'react-router-dom'
@@ -41,9 +41,6 @@ export default function Pokemon() {
     data: null
   })
 
-  // const poke = data
-
-  console.log({ data })
   if (state === 'loading' || state === 'idle') {
     return <div>Cargando...</div>
   }
@@ -53,7 +50,7 @@ export default function Pokemon() {
   }
 
   return (
-    <Grid item xs={12} md={12} sx={{ py: 5, my: 5 }}>
+    <>
       <Typography variant="h2" gutterBottom sx={{ textAlign: 'center' }}>
         This is the pokemon
       </Typography>
@@ -88,6 +85,6 @@ export default function Pokemon() {
           </Typography>
         </>
       )}
-    </Grid>
+    </>
   )
 }

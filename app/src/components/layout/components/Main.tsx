@@ -1,17 +1,18 @@
 import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import Divider from '@mui/material/Divider'
+import { Outlet } from 'react-router-dom'
 
-interface MainProps {
-  posts: ReadonlyArray<string>
-  title: string
+export default function Main() {
+  return (
+    <Grid container spacing={4}>
+      <Grid item xs={12} md={12} sx={{ py: 5, my: 5 }}>
+        <Outlet />
+      </Grid>
+    </Grid>
+  )
 }
 
-export default function Main(props: MainProps) {
-  const { posts, title } = props
-
-  return (
-    <Grid
+{
+  /* <Grid
       item
       xs={12}
       md={8}
@@ -21,11 +22,12 @@ export default function Main(props: MainProps) {
         }
       }}
     >
-      <Typography variant="h6" gutterBottom>
-        {title}
-      </Typography>
-      <Divider />
-      {posts.map((post) => ({ post }))}
-    </Grid>
-  )
+      <Grid item xs={12} md={12} sx={{ py: 5, my: 5 }}>
+        <Typography variant="h6" gutterBottom>
+          {title}
+        </Typography>
+        <Divider />
+        {posts.map((post) => ({ post }))}
+      </Grid>
+    </Grid> */
 }
