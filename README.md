@@ -29,3 +29,4 @@ https://mui.com/getting-started/templates/blog/
 - [ ] User Context
 - [ ] Add formik
 - [ ] Add firebase
+- [ ] Modal
